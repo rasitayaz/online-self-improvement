@@ -1,0 +1,15 @@
+USE ONLINE_SELF_IMPROVEMENT;
+
+--DROP PROCEDURE DeleteTopic;
+
+GO
+CREATE PROCEDURE DeleteTopic
+	@CourseID SMALLINT,
+	@TopicName NVARCHAR(50)
+AS
+BEGIN
+	SET NOCOUNT ON
+	DELETE FROM CourseTopic
+		WHERE @CourseID=CourseTopic.CourseID AND @TopicName=CourseTopic.Name;
+END
+GO

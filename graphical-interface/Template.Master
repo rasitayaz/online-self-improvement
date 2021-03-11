@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="OnlineSelfImprovement.Template" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>OSI</title>
+    <link rel="StyleSheet" href="style.css" type="text/css" media="screen">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+            <div id="header"></div>
+
+            <div id="mainarea">
+                <div id="sidebar">
+                    <div id="headerleft">
+                        <h1><a href="#">ONLINE SELF IMPROVEMENT</a></h1>
+                    </div>
+                    <div id="menulinks">
+                        <a href="default.aspx">Anasayfa</a>
+                        <a href="Meetings.aspx">Program</a>
+                        <a href="Students.aspx">Öğrenciler</a>
+                        <a href="Instructors.aspx">Eğitmenler</a>
+                        <a href="Courses.aspx">Kurslar</a>
+                        
+                    </div>
+                </div>
+
+                <div id="contentarea">
+                    <asp:ContentPlaceHolder ID="PagePlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div id="footer">
+                    Copyright © by Agalar
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+USE ONLINE_SELF_IMPROVEMENT;
+
+---DROP PROCEDURE AddCourse;
+
+GO
+CREATE PROCEDURE AddCourse
+   @CourseName NVARCHAR(50)
+AS
+BEGIN
+   SET NOCOUNT ON
+	   INSERT INTO dbo.Course(Name) 
+         VALUES (@CourseName);
+END
+GO

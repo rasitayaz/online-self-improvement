@@ -1,0 +1,15 @@
+USE ONLINE_SELF_IMPROVEMENT;
+
+---DROP PROCEDURE AddExam;
+
+GO
+CREATE PROCEDURE AddExam
+   @CourseID SMALLINT,
+   @NumOfQuestions TINYINT = NULL
+AS
+BEGIN
+   SET NOCOUNT ON
+   INSERT INTO dbo.Exam(CourseID,NumOfQuestions)
+		VALUES(@CourseID,@NumOfQuestions);
+END
+GO

@@ -1,0 +1,12 @@
+USE ONLINE_SELF_IMPROVEMENT;
+
+--DROP PROCEDURE DeleteCourse;
+GO
+CREATE PROCEDURE DeleteCourse
+	@Name nvarchar(50)
+AS 
+BEGIN 
+	SET NOCOUNT ON
+	DELETE FROM Course WHERE @Name=Course.Name;
+END
+GO
